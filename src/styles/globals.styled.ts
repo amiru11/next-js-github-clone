@@ -1,6 +1,6 @@
 import css from 'styled-jsx/css';
 
-export default css.global`
+const styles = css.global`
   @import './reset.scss';
 
   html,
@@ -19,3 +19,5 @@ export default css.global`
     box-sizing: border-box;
   }
 `;
+
+export default styles;

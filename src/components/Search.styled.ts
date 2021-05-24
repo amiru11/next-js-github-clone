@@ -1,11 +1,12 @@
 import css from 'styled-jsx/css';
 
 const styles = css.global`
-  .home-container {
+  .search-container {
+    width: 50%;
+    margin: 0 auto;
     display: flex;
-    align-items: center;
     justify-content: center;
-    height: 100%;
+    align-items: center;
   }
 `;
 
