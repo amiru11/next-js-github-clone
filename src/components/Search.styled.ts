@@ -8,15 +8,14 @@ const styles = css.global`
     justify-content: center;
     align-items: center;
   }
-  
+
   .search-wrap {
     border-bottom: 1px solid #333333;
     display: flex;
     align-items: center;
     justify-self: center;
-    min-width: 50%;
   }
-  
+
   .search-input {
     border: 0;
     color: #333333;
@@ -29,7 +28,7 @@ const styles = css.global`
     text-align: left;
     padding: 0;
   }
-  
+
   .search-button {
     background-color: transparent;
     border: 0;

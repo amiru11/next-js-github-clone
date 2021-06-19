@@ -7,11 +7,11 @@ const styles = css.global`
     align-items: center;
     justify-content: center;
     height: 100%;
-  }
-  
-  h2 {
-    margin-bottom: 50px;
-    font-size: 2rem;
+
+    h2 {
+      margin-bottom: 50px;
+      font-size: 2rem;
+    }
   }
 `;
 

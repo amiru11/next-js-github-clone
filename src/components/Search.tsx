@@ -16,7 +16,6 @@ export default function SearchComponent() {
   };
 
   const handleKeydown = (event: KeyboardEvent<HTMLInputElement>): void => {
-    console.log('event.key', event.code);
     if (event.key === 'Enter') {
       router.push(`/users/${value}`);
     }

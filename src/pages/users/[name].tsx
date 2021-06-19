@@ -12,14 +12,33 @@ const fetcher = (url) => axios.get(url).then((res) => res.data);
 
 export default function UserPage() {
   const router = useRouter();
-  const { data: user, error } = useSWR(`https://api.github.com/users/${router.query.name}`, fetcher);
-  console.log('router', router.query, user);
+  const { data: user, error } = useSWR(
+    `https://api.github.com/users/${router.query.name}`,
+    fetcher,
+  );
+  console.log('router', router.query, user, error);
+
+  const goToHome = () => {
+    router.push('/');
+  };
   return (
     <div className={cx('user-container')}>
-      <Profile />
-      <Repository />
+      {!(user && error) && (
+        <>
+          <Profile />
+          <Repository />
+        </>
+      )}
+      {(!user || error) && (
+        <div className={'not-found-wrap'}>
+          <h2>I don't know 😳</h2>
+          <button className={'home-button'} onClick={goToHome}>
+            HOME
+          </button>
+        </div>
+      )}
 
       <style jsx>{styles}</style>
-    </div >
+    </div>
   );
 }
